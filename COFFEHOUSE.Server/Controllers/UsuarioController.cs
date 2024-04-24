@@ -15,15 +15,15 @@ namespace COFFEHOUSE.Server.Controllers
     {
         private readonly IRepositorioUsuarios _repositorioUsuarios;
         private readonly UserManager<Usuario> _userManager;
-        private readonly SignInManager<Usuario> _signInManager;
+        //private readonly SignInManager<Usuario> _signInManager;
 
         public UsuarioController(IRepositorioUsuarios repositorioUsuarios,
-                                 UserManager<Usuario> userManager,
-                                 SignInManager<Usuario> signInManager)
+                                 UserManager<Usuario> userManager)
+                                 
         {
             _repositorioUsuarios = repositorioUsuarios;
             _userManager = userManager;
-            _signInManager = signInManager;
+            //_signInManager = signInManager;
         }
 
         [HttpPost("registro")]
@@ -50,31 +50,7 @@ namespace COFFEHOUSE.Server.Controllers
             return BadRequest();
         }
 
-        [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] string nombreUsuario, string contraseña)
-        {
-            if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contraseña))
-            {
-                return BadRequest("Contraseña o Nombre de usuario vacios");
-            }
-
-            var usuario = await _userManager.FindByNameAsync(nombreUsuario);
-            if (usuario == null)
-            {
-                return NotFound("Usuario no encontrado");
-            }
-
-            var resultado = await _signInManager.CheckPasswordSignInAsync(usuario, contraseña, lockoutOnFailure: false);
-            if (resultado.Succeeded)
-            {
-                
-                return Ok(usuario); 
-            }
-            else
-            {
-                return BadRequest("Usuario o contraseña incorrectos");
-            }
-        }
+        
 
 
 

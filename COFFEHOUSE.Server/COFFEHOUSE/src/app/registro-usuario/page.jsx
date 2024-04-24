@@ -1,4 +1,49 @@
+"use client";
+import { useState } from "react";
 const page = () => {
+  const [nombre, setNombre] = useState();
+  const [apellido, setApellido] = useState();
+  const [nombreUsuario, setNombreUsuario] = useState();
+  const [password, setPassword] = useState();
+  const [estado, setEstado] = useState();
+  const [idRol, setIdRol] = useState();
+  const [data, setData] = useState();
+
+  const objInfo = {
+    nombre,
+    apellido,
+    nombreUsuario,
+    password,
+    estado,
+    idRol,
+  };
+  const handleSubmit = async (e) => {
+    e.PreventDefault();
+
+    setData(objInfo);
+
+    try {
+      const response = await fetch("/Usuario/registro", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key: "value" }),
+      });
+    } catch (error) {}
+  };
+  /* const { register, handleSubmit } = useForm();
+  const onSubmit = async (data) => {
+    const res = await fetch("/Usuario/registro", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    });
+    const resJSON = await res.json();
+    /* console.log(resJSON); */
+  /*if (res.ok) {
+      router.push("/auth/login");
+    }
+  }; */
+
   return (
     <div className="flex justify-center items-center">
       <div style={{ backgroundColor: "#bb8b90" }} className="rounded-lg ">
@@ -7,7 +52,10 @@ const page = () => {
             Registrar Usuario
           </h2>
         </div>
-        <form action="" className="mt-5 flex flex-col  items-center mb-10">
+        <form
+          onSubmit={handleSubmit}
+          className="mt-5 flex flex-col  items-center mb-10"
+        >
           <div className="flex space-x-10">
             <div>
               <div className="flex flex-col ">
@@ -21,6 +69,9 @@ const page = () => {
                   type="text"
                   className="w-80  rounded-lg border-none"
                   style={{ backgroundColor: "#dfdfdf" }}
+                  onChange={(e) => {
+                    setNombre(e.target.value);
+                  }}
                 />
               </div>
             </div>
@@ -35,6 +86,9 @@ const page = () => {
                 type="text"
                 className="w-80  rounded-lg border-none"
                 style={{ backgroundColor: "#dfdfdf" }}
+                onChange={(e) => {
+                  setApellido(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -52,6 +106,9 @@ const page = () => {
                   type="text"
                   className="w-80  rounded-lg border-none"
                   style={{ backgroundColor: "#dfdfdf" }}
+                  onChange={(e) => {
+                    setNombreUsuario(e.target.value);
+                  }}
                 />
               </div>
             </div>
@@ -66,6 +123,9 @@ const page = () => {
                 type="password"
                 className="w-80  rounded-lg border-none"
                 style={{ backgroundColor: "#dfdfdf" }}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
             </div>
           </div>
@@ -79,12 +139,14 @@ const page = () => {
                 >
                   Estado
                 </label>
-                <select
-                  name=""
+                <input
+                  type="text"
                   className="w-80  rounded-lg border-none"
                   style={{ backgroundColor: "#dfdfdf" }}
-                  id=""
-                ></select>
+                  onChange={(e) => {
+                    setEstado(e.target.value);
+                  }}
+                />
               </div>
             </div>
             <div className="flex flex-col ">
@@ -94,12 +156,14 @@ const page = () => {
               >
                 Rol
               </label>
-              <select
-                name=""
+              <input
+                type="text"
                 className="w-80  rounded-lg border-none"
                 style={{ backgroundColor: "#dfdfdf" }}
-                id=""
-              ></select>
+                onChange={(e) => {
+                  setIdRol(e.target.value);
+                }}
+              />
             </div>
           </div>
 
