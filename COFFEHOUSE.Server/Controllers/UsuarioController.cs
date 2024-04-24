@@ -26,7 +26,7 @@ namespace COFFEHOUSE.Server.Controllers
             _signInManager = signInManager;
         }
 
-        [HttpPost]
+        [HttpPost("registro")]
 
         public async Task<IActionResult> RegistrarUsuario([FromBody] UsuarioDTO usuarioDTO)
         {
