@@ -1,9 +1,9 @@
 const NavBar = () => {
   return (  
     <nav style={{ backgroundColor: 'transparent' }}>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="img/LogoCafe.png" className="h-36" alt="Logo" />  
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between ml-12 p-4">
+        <a className="flex items-center  rtl:space-x-reverse">
+          <img src="img/LogoCafe.png" className="h-28" alt="Logo" />  
         </a>
         
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
