@@ -1,36 +1,36 @@
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-rose-900 text-6xl mb-4 justify-center text-center ml-20">
+    <div className="mx-0">
+      <h1 className="text-rose-900 text-6xl mb-4 justify-center text-center">
         Coffee House
       </h1>
-      <div className="flex ml-12">
-        <div className="w-1/4  mt-40 text-5xl text-rose-900">
+      <div className="flex">
+        <div className="w-1/4 px-14 mt-14 text-4xl text-rose-900">
           <ul className="list-disc pl-4">
-            <li className="mb-12 hover:bg-pink-100 hover:rounded-full">
+            <li className="mb-8 hover:bg-pink-100 hover:rounded-full">
               Ice Coffe
             </li>
-            <li className="mb-12 hover:bg-pink-100  hover:rounded-full">
+            <li className="mb-8 hover:bg-pink-100  hover:rounded-full">
               Hot Coffe
             </li>
-            <li className="mb-12 hover:bg-pink-100  hover:rounded-full">
+            <li className="mb-8 hover:bg-pink-100  hover:rounded-full">
               Dessert
             </li>
-            <li className="mb-12 hover:bg-pink-100  hover:rounded-full">
+            <li className="mb-8 hover:bg-pink-100  hover:rounded-full">
               Temporada
             </li>
-            <li className=" hover:bg-pink-100  hover:rounded-full">
+            <li className="mb-8 hover:bg-pink-100  hover:rounded-full">
               Extras
             </li>
           </ul>
         </div>
         <div>
-          <div className=" flex mx-20 mt-5">
-            <div className="">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-10/12 flex">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -51,11 +51,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-12">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -75,11 +75,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="ml-12">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -102,12 +102,12 @@ export default function Home() {
           </div>
 
           {/* Fila nueva */}
-          <div className=" flex mx-20 mt-8">
-            <div className="">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div className="w-10/12 flex">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -128,11 +128,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="ml-12">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -152,11 +152,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="ml-12">
-              <div class=" bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div className="px-14">
+              <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
                   <img
-                    class="rounded-t-xl"
+                    class="rounded-t-lg"
                     src="img/menu1.png"
                     alt=""
                     className="h-70"
@@ -177,7 +177,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
