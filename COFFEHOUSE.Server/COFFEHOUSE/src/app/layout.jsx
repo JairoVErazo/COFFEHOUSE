@@ -1,8 +1,9 @@
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import NavBar from "@/Components/NavBar";
 import "./globals.css";
+import NavBarAdmin from "@/Components/NavBarAdmin";
 
-const inter = Inter({ subsets: ["latin"] });
+const monse = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Coffe House - Home",
@@ -12,8 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{ backgroundImage: 'url("img/fondo.png")', backgroundSize: 'cover', minHeight: '100vh' }}>
-        <NavBar />
+      <body
+        className={monse.className}
+        style={{
+          backgroundImage: 'url("img/fondo.png")',
+          backgroundSize: "cover",
+          minHeight: "100vh",
+        }}
+      >
+        <NavBarAdmin />
         {children}
       </body>
     </html>
