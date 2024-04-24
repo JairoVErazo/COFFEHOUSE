@@ -1,4 +1,9 @@
 
+using COFFEHOUSE.Server.Model;
+using COFFEHOUSE.Server.Servicios;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 namespace COFFEHOUSE.Server
 {
     public class Program
@@ -10,6 +15,11 @@ namespace COFFEHOUSE.Server
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddDbContext<CoffehouseContext>(options => 
+            options.UseSqlServer("name=DefaultConnection"));
+            builder.Services.AddTransient<IRepositorioUsuarios, RepositorioUsuarios>();
+            builder.Services.AddTransient<IUserStore<Usuario>, UserStore>();
+            builder.Services.AddIdentityCore<Usuario>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
