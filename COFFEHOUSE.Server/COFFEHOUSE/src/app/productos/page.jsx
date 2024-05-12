@@ -3,7 +3,10 @@ import React from "react";
 const page = () => {
   return (
     <div className="flex justify-center" style={{ color: "#94303c" }}>
-      <div className="col-md-6">
+      <div
+        className="col-md-6 py-16 rounded-md"
+        style={{ backgroundColor: "#f7f6f6" }}
+      >
         <h2
           className="text-center"
           style={{ fontSize: "45px", fontWeight: "bold", marginLeft: "40px" }}
@@ -13,29 +16,20 @@ const page = () => {
           </div>
         </h2>
         <div
-          className="card"
+          className="card rounded-xl"
           style={{
-            borderRadius: "10px",
             marginBottom: "20px",
             backgroundColor: "#ffffff, 0.7",
             padding: "50px",
           }}
         >
-          <div
-            className="card-body"
-            style={{
-              borderRadius: "10px",
-              marginBottom: "20px",
-              backgroundColor: "#ffffff, 0.7",
-              padding: "50px",
-            }}
-          >
+          <div className="card-body">
             <div className="details space-y-11">
               <div
                 style={{
                   padding: "30px",
                   backgroundColor: "#ffffff",
-                  borderRadius: "25px",
+                  borderRadius: "100px",
                 }}
               >
                 <p
@@ -54,6 +48,7 @@ const page = () => {
                       width: "150px",
                       height: "150px",
                       border: "5px solid #94303c",
+                      marginLeft: "40px",
                     }}
                     alt="cake"
                   />
@@ -88,10 +83,12 @@ const page = () => {
                     }}
                   >
                     <p>Ingredientes</p>
-                    <img
-                      src={"/img/UilSearchPlus.svg"}
-                      style={{ width: "50px" }}
-                    ></img>
+                    <div className="flex justify-center">
+                      <img
+                        src={"/img/UilSearchPlus.svg"}
+                        style={{ width: "50px" }}
+                      ></img>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,7 +97,7 @@ const page = () => {
                 style={{
                   padding: "30px",
                   backgroundColor: "#ffffff",
-                  borderRadius: "25px",
+                  borderRadius: "100px",
                 }}
               >
                 <p
@@ -119,6 +116,7 @@ const page = () => {
                       width: "150px",
                       height: "150px",
                       border: "5px solid #94303c",
+                      marginLeft: "40px",
                     }}
                     alt="cake"
                   />
@@ -153,10 +151,12 @@ const page = () => {
                     }}
                   >
                     <p>Ingredientes</p>
-                    <img
-                      src={"/img/UilSearchPlus.svg"}
-                      style={{ width: "50px" }}
-                    ></img>
+                    <div className="flex justify-center">
+                      <img
+                        src={"/img/UilSearchPlus.svg"}
+                        style={{ width: "50px" }}
+                      ></img>
+                    </div>
                   </div>
                 </div>
               </div>
