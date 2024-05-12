@@ -12,7 +12,7 @@ const page = () => {
           style={{ fontSize: "45px", fontWeight: "bold", marginLeft: "40px" }}
         >
           <div>
-            <h1>PRODUCTOS</h1>
+            <h1>INGREDIENTES</h1>
           </div>
         </h2>
         <div
@@ -60,35 +60,28 @@ const page = () => {
                       marginLeft: "100px",
                     }}
                   >
-                    <p>Costo</p>
-                    <p>Precio</p>
-                  </div>
-                  <div
-                    style={{
-                      textAlign: "center",
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      marginLeft: "100px",
-                    }}
-                  >
-                    <p>$4.00</p>
-                    <p>$5.00</p>
-                  </div>
-                  <div
-                    style={{
-                      textAlign: "center",
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      marginLeft: "100px",
-                    }}
-                  >
-                    <p>Ingredientes</p>
-                    <div className="flex justify-center">
+                    <div className="flex ">
+                      <p>Cantidad</p>
                       <img
-                        src={"/img/UilSearchPlus.svg"}
-                        style={{ width: "50px" }}
-                      ></img>
+                        src="/img/UilSearchPlus.svg"
+                        alt="ver mas"
+                        width={30}
+                        className="ms-2"
+                      />
                     </div>
+
+                    <p>12</p>
+                  </div>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      marginLeft: "100px",
+                    }}
+                  >
+                    <p>Precio</p>
+                    <p>$5.00</p>
                   </div>
                 </div>
               </div>
@@ -128,35 +121,28 @@ const page = () => {
                       marginLeft: "100px",
                     }}
                   >
-                    <p>Costo</p>
-                    <p>Precio</p>
-                  </div>
-                  <div
-                    style={{
-                      textAlign: "center",
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      marginLeft: "100px",
-                    }}
-                  >
-                    <p>$4.00</p>
-                    <p>$5.00</p>
-                  </div>
-                  <div
-                    style={{
-                      textAlign: "center",
-                      fontSize: "25px",
-                      fontWeight: "bold",
-                      marginLeft: "100px",
-                    }}
-                  >
-                    <p>Ingredientes</p>
-                    <div className="flex justify-center">
+                    <div className="flex ">
+                      <p>Cantidad</p>
                       <img
-                        src={"/img/UilSearchPlus.svg"}
-                        style={{ width: "50px" }}
-                      ></img>
+                        src="/img/UilSearchPlus.svg"
+                        alt="ver mas"
+                        width={30}
+                        className="ms-2"
+                      />
                     </div>
+
+                    <p>12</p>
+                  </div>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: "25px",
+                      fontWeight: "bold",
+                      marginLeft: "100px",
+                    }}
+                  >
+                    <p>Precio</p>
+                    <p>$5.00</p>
                   </div>
                 </div>
               </div>
